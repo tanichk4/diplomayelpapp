@@ -35,11 +35,11 @@ const Cart = React.memo(({ cartItems, removeFromCart, addToCart }) => {
           </button>
         </div>
       ) : (
-        <div>
+        <>
           {cartItems.length === 0 ? (
             <p className="cart__placed-order--not">Order something first</p>
           ) : (
-            <>
+            <div className="cart__order--list">
               {cartItems.map((item) => (
                 <div key={item.id} className="cart--item">
                   <div className="cart--item__image">
@@ -72,9 +72,9 @@ const Cart = React.memo(({ cartItems, removeFromCart, addToCart }) => {
               <button className="cart__order--button" onClick={handleOrder}>
                 Order - ${totalPrice}
               </button>
-            </>
+            </div>
           )}
-        </div>
+        </>
       )}
     </div>
   );

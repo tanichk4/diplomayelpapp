@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useMemo, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNav } from "../hooks/useNav";
 import { getAuth, signOut as out } from "firebase/auth";
@@ -13,17 +13,15 @@ import FilterImage from "../assets/filter.svg";
 import signOutImage from "../assets/logout.svg";
 
 import ArticlesList from "./ArticlesList";
-
 import Item from "./Item";
 import Cart from "./Cart";
-
 import { items } from "./items";
 import { articles } from "./articles";
 import { itemArray } from "./itemArray";
 
 import "../styles/appRight.scss";
-
 import "../styles/ItemsFilter.scss";
+
 
 const AppRight = () => {
   const [filterType, setFilterType] = useState(null);
@@ -37,63 +35,72 @@ const AppRight = () => {
     setFilterType(type);
   };
 
-  const handleItemClick = (itemName) => {
-    setActiveItem(itemName);
-    handleFilterClick(itemName);
-  };
-
   const handleCartClick = () => {
     setIsCartVisible(true);
   };
 
-  const handleAddToCart = (item) => {
-    const existingItem = cartItems.find(
-      (cartItem) => cartItem.title === item.title
-    );
-    if (existingItem) {
-      const updatedCartItems = cartItems.map((cartItem) =>
-        cartItem.title === item.title
-          ? { ...cartItem, quantity: cartItem.quantity + 1 }
-          : cartItem
-      );
-      setCartItems(updatedCartItems);
-    } else {
-      setCartItems([...cartItems, { ...item, quantity: 1 }]);
-    }
+  const handleItemClick = useMemo(
+    () => (itemName) => {
+      setActiveItem(itemName);
+      handleFilterClick(itemName);
+    },
+    []
+  );
 
-    setCartItemCount(cartItemCount + 1);
-  };
-  const handleRemoveFromCart = (item) => {
-    const existingItem = cartItems.find(
-      (cartItem) => cartItem.title === item.title
-    );
-    if (existingItem) {
-      if (existingItem.quantity > 1) {
+  const handleAddToCart = useMemo(
+    () => (item) => {
+      const existingItem = cartItems.find((cartItem) => cartItem.title === item.title);
+      if (existingItem) {
         const updatedCartItems = cartItems.map((cartItem) =>
           cartItem.title === item.title
-            ? { ...cartItem, quantity: cartItem.quantity - 1 }
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
             : cartItem
         );
         setCartItems(updatedCartItems);
       } else {
-        const updatedCartItems = cartItems.filter(
-          (cartItem) => cartItem.title !== item.title
-        );
-        setCartItems(updatedCartItems);
+        setCartItems([...cartItems, { ...item, quantity: 1 }]);
       }
-    }
 
-    setCartItemCount(cartItemCount - 1);
-  };
+      setCartItemCount(cartItemCount + 1);
+    },
+    [cartItems, cartItemCount]
+  );
 
-  const filteredFoods = filterType
-    ? foods.filter((food) => food.type === filterType)
-    : foods;
+  const handleRemoveFromCart = useMemo(
+    () => (item) => {
+      const existingItem = cartItems.find((cartItem) => cartItem.title === item.title);
+      if (existingItem) {
+        if (existingItem.quantity > 1) {
+          const updatedCartItems = cartItems.map((cartItem) =>
+            cartItem.title === item.title
+              ? { ...cartItem, quantity: cartItem.quantity - 1 }
+              : cartItem
+          );
+          setCartItems(updatedCartItems);
+        } else {
+          const updatedCartItems = cartItems.filter((cartItem) => cartItem.title !== item.title);
+          setCartItems(updatedCartItems);
+        }
+      }
 
-  const itemClass = (itemName) =>
-    classNames("items__filter--item", {
-      "items__filter--item--active": activeItem === itemName,
-    });
+      setCartItemCount(cartItemCount - 1);
+    },
+    [cartItems, cartItemCount]
+  );
+
+  const filteredFoods = useMemo(() => (filterType ? foods.filter((food) => food.type === filterType) : foods), [
+    filterType,
+    foods
+  ]);
+
+  const itemClass = useMemo(
+    () => (itemName) =>
+      classNames("items__filter--item", {
+        "items__filter--item--active": activeItem === itemName
+      }),
+    [activeItem]
+  );
+
 
   const auth = getAuth();
   const { goTo } = useNav();
@@ -213,9 +220,7 @@ const AppRight = () => {
 
       <div className="app__right--order">
         <div className="order__nav">
-
           <div className="order__nav--container">
-
             {cartItemCount > 0 && <div className="order__nav--notification" />}
             <button className="button">
               <img src={SearchImage} alt="search" />
@@ -226,9 +231,7 @@ const AppRight = () => {
             <button className="button" onClick={handleCartClick}>
               <img src={CartImage} alt="cart" />
             </button>
-
           </div>
-
 
           {isCartVisible && (
             <Cart

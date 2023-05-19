@@ -107,6 +107,10 @@
       line-height: 18px;
       color: #ffffff;
     }
+    &--list {
+      height: 553px;
+      overflow: auto;
+    }
   }
   &__placed-order {
     p {
