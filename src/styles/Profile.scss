@@ -1,0 +1,31 @@
+.profile {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__avatar {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    top: 8px;
+    left: 8px;
+
+    &__container {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      background: #ffffff;
+      border-radius: 15px;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

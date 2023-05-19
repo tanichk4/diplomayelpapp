@@ -1,0 +1,15 @@
+.image {
+  position: absolute;
+
+  &-grape {
+    transform: rotate(-20.22deg);
+    right: 280px;
+    bottom: -100px;
+  }
+
+  &-burger {
+    top: -180px;
+    right: -150px;
+    transform: rotate(-10deg);
+  }
+}

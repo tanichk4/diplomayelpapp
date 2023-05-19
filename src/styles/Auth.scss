@@ -1,0 +1,30 @@
+.image {
+  position: absolute;
+  z-index: -1;
+
+  &-grape {
+    left: -4.125vw;
+    top: -3.125vw;
+  }
+
+  &-leaf {
+    right: 0.625vw;
+    top: 0.6875vw;
+    transform: rotate(3deg);
+  }
+
+  &-apple {
+    left: 6.25vw;
+    bottom: 5.5vw;
+  }
+
+  &-orange {
+    right: 0.8125vw;
+    bottom: -1.25vw;
+  }
+
+  &-hungry {
+    top: 6.9vw;
+    right: 37.6vw;
+  }
+}

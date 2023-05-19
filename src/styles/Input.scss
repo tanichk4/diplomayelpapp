@@ -1,0 +1,25 @@
+label {
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+input {
+  box-sizing: border-box;
+  padding: 16px 13px;
+  width: 388px;
+  height: 50px;
+  background: #f3f3f3;
+  border-radius: 15px;
+  border: none;
+
+  &::placeholder {
+    color: #cc9696;
+  }
+  &:focus {
+    outline: none;
+  }
+}

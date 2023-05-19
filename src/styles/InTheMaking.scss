@@ -1,0 +1,25 @@
+.making {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    h2 {
+      text-align: center;
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 65px;
+    }
+    button {
+      border: none;
+      height: 50px;
+      background: #2d9cdb;
+      border-radius: 15px;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 18px;
+      color: #ffffff;
+    }
+  }
+}

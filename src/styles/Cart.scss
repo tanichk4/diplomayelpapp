@@ -1,0 +1,144 @@
+.cart {
+  z-index: 1000;
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      font-weight: 800;
+      font-size: 30px;
+      line-height: 34px;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    width: 314px;
+    height: 744px;
+    right: -59px;
+    top: -10px;
+    box-sizing: border-box;
+    padding: 36px 32px;
+    z-index: 10000;
+    background: white;
+    box-shadow: 0px 4px 46px rgba(0, 0, 0, 0.2);
+    border-radius: 30px 0px 0px 30px;
+  }
+
+  &__button {
+    border: none;
+    width: 46px;
+    height: 46px;
+    background: #f5f6f7;
+    border-radius: 15px;
+
+    img {
+      display: block;
+      margin: 19.5px auto;
+    }
+  }
+  &--item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    &__details {
+      h2 {
+        text-align: left;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+        margin: 0;
+      }
+      p {
+        text-align: left;
+        max-width: 90px;
+        font-weight: 600;
+        font-size: 7px;
+        line-height: 10px;
+        color: #898686;
+      }
+    }
+
+    &__image {
+      margin-right: 5px;
+      width: 47px;
+      height: 47px;
+      border-radius: 15px;
+      background-color: #fff0a5;
+      box-sizing: border-box;
+      padding: 5px;
+
+      img {
+        width: 36px;
+        height: 36px;
+        display: block;
+        margin: auto;
+      }
+    }
+    &__price {
+      font-weight: 700;
+      font-size: 8px;
+      line-height: 18px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__order {
+    &--button {
+      position: absolute;
+      bottom: 20px;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 252px;
+      height: 50px;
+      background: #2d9cdb;
+      border-radius: 15px;
+      box-sizing: border-box;
+      padding: 16px;
+
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 18px;
+      color: #ffffff;
+    }
+  }
+  &__placed-order {
+    p {
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+    }
+    &--not {
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+    }
+  }
+  &--buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  &--increment {
+    color: green;
+  }
+  &--decrement {
+    color: red;
+  }
+}
