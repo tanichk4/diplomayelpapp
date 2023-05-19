@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Loader.scss";
-import grapesImage from "../assets/grapes.svg"
-import burgerImage from "../assets/burger.svg"
-
+import grapesImage from "../assets/grapes.svg";
+import burgerImage from "../assets/burger.svg";
 
 const Loader = () => {
   const [visible, setVisible] = useState(true);
@@ -19,8 +18,16 @@ const Loader = () => {
     <div className="loading">
       {visible && (
         <div className="hello-text">
-          <img src={grapesImage} alt="grapes" className="loading-image loading-image-grape"/>
-          <img src={burgerImage} alt="burger" className="loading-image loading-image-burger"/>
+          <img
+            src={grapesImage}
+            alt="grapes"
+            className="loading-image loading-image-grape"
+          />
+          <img
+            src={burgerImage}
+            alt="burger"
+            className="loading-image loading-image-burger"
+          />
           <h2>Yelp App</h2> <p>developed by Tania Fedorkiv</p>
         </div>
       )}

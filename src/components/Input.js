@@ -10,9 +10,8 @@ const Input = ({
   value,
   onChange,
 }) => {
-
   const labelClass = classNames("label");
-  
+
   return (
     <label className={labelClass}>
       <span>{label}</span>

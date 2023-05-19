@@ -44,7 +44,11 @@ const Form = ({ onSubmit, email, pass, secondPass, addAccount = false }) => {
           />
         )}
         <div className={classNames("form__buttons")}>
-          <Button variant="contained" type="submit" className={classNames("form__button")}>
+          <Button
+            variant="contained"
+            type="submit"
+            className={classNames("form__button")}
+          >
             <span>{addAccount ? "Login" : "Register"}</span>
           </Button>
 

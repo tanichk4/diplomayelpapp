@@ -22,7 +22,6 @@ import { itemArray } from "./itemArray";
 import "../styles/appRight.scss";
 import "../styles/ItemsFilter.scss";
 
-
 const AppRight = () => {
   const [filterType, setFilterType] = useState(null);
   const [foods, setFoods] = useState(itemArray);
@@ -49,7 +48,9 @@ const AppRight = () => {
 
   const handleAddToCart = useMemo(
     () => (item) => {
-      const existingItem = cartItems.find((cartItem) => cartItem.title === item.title);
+      const existingItem = cartItems.find(
+        (cartItem) => cartItem.title === item.title
+      );
       if (existingItem) {
         const updatedCartItems = cartItems.map((cartItem) =>
           cartItem.title === item.title
@@ -68,7 +69,9 @@ const AppRight = () => {
 
   const handleRemoveFromCart = useMemo(
     () => (item) => {
-      const existingItem = cartItems.find((cartItem) => cartItem.title === item.title);
+      const existingItem = cartItems.find(
+        (cartItem) => cartItem.title === item.title
+      );
       if (existingItem) {
         if (existingItem.quantity > 1) {
           const updatedCartItems = cartItems.map((cartItem) =>
@@ -78,7 +81,9 @@ const AppRight = () => {
           );
           setCartItems(updatedCartItems);
         } else {
-          const updatedCartItems = cartItems.filter((cartItem) => cartItem.title !== item.title);
+          const updatedCartItems = cartItems.filter(
+            (cartItem) => cartItem.title !== item.title
+          );
           setCartItems(updatedCartItems);
         }
       }
@@ -88,19 +93,19 @@ const AppRight = () => {
     [cartItems, cartItemCount]
   );
 
-  const filteredFoods = useMemo(() => (filterType ? foods.filter((food) => food.type === filterType) : foods), [
-    filterType,
-    foods
-  ]);
+  const filteredFoods = useMemo(
+    () =>
+      filterType ? foods.filter((food) => food.type === filterType) : foods,
+    [filterType, foods]
+  );
 
   const itemClass = useMemo(
     () => (itemName) =>
       classNames("items__filter--item", {
-        "items__filter--item--active": activeItem === itemName
+        "items__filter--item--active": activeItem === itemName,
       }),
     [activeItem]
   );
-
 
   const auth = getAuth();
   const { goTo } = useNav();
