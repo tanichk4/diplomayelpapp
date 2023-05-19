@@ -10,6 +10,7 @@ import SearchImage from "../assets/search.svg";
 import CartImage from "../assets/cart.svg";
 import arrowImage from "../assets/arrow.svg";
 import FilterImage from "../assets/filter.svg";
+import signOutImage from "../assets/logout.svg";
 
 import ArticlesList from "./ArticlesList";
 
@@ -212,13 +213,23 @@ const AppRight = () => {
 
       <div className="app__right--order">
         <div className="order__nav">
-          {cartItemCount > 0 && <div className="order__nav--notification" />}
-          <button className="order__nav--search">
-            <img src={SearchImage} alt="search" />
-          </button>
-          <button className="order__nav--cart" onClick={handleCartClick}>
-            <img src={CartImage} alt="cart" />
-          </button>
+
+          <div className="order__nav--container">
+
+            {cartItemCount > 0 && <div className="order__nav--notification" />}
+            <button className="button">
+              <img src={SearchImage} alt="search" />
+            </button>
+            <button className="button" onClick={signOut}>
+              <img src={signOutImage} alt="signOut" />
+            </button>
+            <button className="button" onClick={handleCartClick}>
+              <img src={CartImage} alt="cart" />
+            </button>
+
+          </div>
+
+
           {isCartVisible && (
             <Cart
               cartItems={cartItems}
