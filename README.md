@@ -13,7 +13,7 @@ This is a React application that implements a food ordering system with features
 
 To run this project locally, follow the steps below:
 
-1. Clone the repository: `[repository_link]`
+1. Clone the repository: `[https://github.com/tanichk4/diplomayelpapp](https://github.com/tanichk4/diplomayelpapp)`
 2. Install the dependencies by running the command: `npm install`
 3. Start the development server by running the command: `npm start`
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
