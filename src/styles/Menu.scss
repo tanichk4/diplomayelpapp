@@ -1,20 +1,12 @@
-$color-background: #deebfb;
-$color-active: #ff5454;
-$color-active-icon: #df4545;
-$color-active-text: #ffffff;
-$color-icon: #909090;
-$color-icon-active: #ffffff;
-
-$body-width: 1440px;
-$body-height: 900px;
+@import "./variables.scss";
 
 .icon-home {
-  stroke: $color-icon;
+  stroke: $slateGray;
 }
 
 .menu {
   width: 185px;
-  background: $color-background;
+  background: $lightBlue;
   &__list {
     padding: 0;
     margin: 27px 0 13px;
@@ -26,29 +18,29 @@ $body-height: 900px;
     border-radius: 15px;
 
     &--active {
-      background: $color-active;
+      background: $brightRed;
 
       .menu {
         &__icon {
-          background: $color-active-icon;
+          background: $tomato;
 
           &__title {
-            color: $color-active-text;
+            color: $white;
           }
         }
 
         &__title {
-          color: $color-active-text;
+          color: $white;
         }
       }
 
       .icon-home {
-        stroke: $color-icon-active;
+        stroke: $white;
       }
       .icon-menu,
       .icon-trending,
       .icon-setting {
-        fill: $color-icon-active;
+        fill: $white;
       }
     }
 
@@ -58,7 +50,7 @@ $body-height: 900px;
   }
 
   &__title {
-    color: $color-icon;
+    color: $slateGray;
   }
 
   &__icon {
@@ -68,7 +60,7 @@ $body-height: 900px;
     justify-content: center;
     width: 46px;
     height: 44px;
-    background: #ffffff;
+    background: $white;
     border-radius: 15px;
   }
 }

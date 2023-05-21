@@ -28,7 +28,7 @@ const Cart = ({
   };
 
   const handleOrder = () => {
-    if (cartItems.length === 0) {
+      if (!cartItems.length) {
       return;
     }
     setCartItems([]);

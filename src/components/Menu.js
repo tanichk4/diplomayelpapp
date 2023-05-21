@@ -1,19 +1,8 @@
-import { useState } from "react";
 import Icon from "./Icon";
 
-// const menuList = [
-//   { id: 1, title: "Home", svgName: "home" },
-//   { id: 2, title: "Menu", svgName: "menu" },
-//   { id: 3, title: "Trending", svgName: "trending" },
-//   { id: 4, title: "Settings", svgName: "setting" },
-// ];
-
 const Menu = ({ activeItem, setActiveItem, menuList }) => {
-  // const [activeItem, setActiveItem] = useState(menuList[0]);
-
   const changeActiveItem = (item) => {
     setActiveItem(item);
-    console.log(item.id);
   };
 
   return (

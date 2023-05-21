@@ -1,6 +1,7 @@
+@import "./variables.scss";
+
 .items {
   &__filter {
-
     &--item {
       cursor: pointer;
       position: relative;
@@ -14,7 +15,7 @@
       border-radius: 60px;
       width: 100px;
       height: 160px;
-      background: #f3f3f3;
+      background: $darkWhite;
 
       &:not(:last-child) {
         margin-right: 12px;
@@ -27,19 +28,18 @@
         flex-direction: column;
         align-items: center;
         justify-content: end;
-  
+
         box-sizing: border-box;
         padding: 20px;
         border-radius: 60px;
         width: 100px;
         height: 160px;
 
-  
         &:not(:last-child) {
           margin-right: 12px;
         }
-        box-shadow: 0px 4px 46px rgba(0, 0, 0, 0.1);
-        background: #ffffff;
+        box-shadow: 0px 4px 46px $lightBlack;
+        background: $white;
         transition: box-shadow 0.3s ease, background 0.3s ease;
       }
     }

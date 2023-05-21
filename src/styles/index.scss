@@ -2,7 +2,6 @@
 
 @import "./app-left.scss";
 @import "./app-right.scss";
-@import "./arrow-button.scss";
 @import "./articles-list.scss";
 @import "./auth.scss";
 @import "./cart.scss";
@@ -14,8 +13,8 @@
 @import "./items-filter.scss";
 @import "./loader.scss";
 @import "./menu.scss";
-@import "./page-under-development.scss";
 @import "./profile.scss";
+@import "./variables.scss";
 
 * {
   font-family: "Spartan", sans-serif;
@@ -24,7 +23,7 @@
 }
 
 body {
-  background: #deebfb;
+  background: $lightBlue;
   max-width: 1340px;
   margin: 0 auto;
   overflow-x: hidden;

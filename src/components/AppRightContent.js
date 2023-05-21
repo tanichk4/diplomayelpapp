@@ -13,7 +13,7 @@ import { items } from "../data/items";
 import { mealArray } from "../data/mealArray";
 import Meal from "./Meal";
 import { useNav } from "../hooks/useNav";
-import { useContext, useState, useRef } from "react";
+import { useContext, useState, useRef, useCallback } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { auth } from "../base";
 import { signOut as out } from "firebase/auth";
@@ -26,67 +26,76 @@ const AppRightContent = () => {
 
   const itemContainerRef = useRef(null);
 
-  const handleFilterClick = (type) => {
+  const handleFilterClick = useCallback((type) => {
     setSelectedType(type);
     itemContainerRef.current.scrollTo(0, 0);
-  };
+  }, []);
 
-  const handleAddToCart = (item) => {
-    const existingItem = cartItems.find(
-      (cartItem) => cartItem.title === item.title
-    );
+  const handleAddToCart = useCallback(
+    (item) => {
+      const existingItem = cartItems.find(
+        (cartItem) => cartItem.title === item.title
+      );
 
-    if (existingItem) {
-      existingItem.quantity += 1;
-      setCartItems([...cartItems]);
-    } else {
-      setCartItems([...cartItems, { ...item, quantity: 1 }]);
-    }
-  };
+      if (existingItem) {
+        existingItem.quantity += 1;
+        setCartItems([...cartItems]);
+      } else {
+        setCartItems([...cartItems, { ...item, quantity: 1 }]);
+      }
+    },
+    [cartItems]
+  );
 
-  const handleRemoveFromCart = (item) => {
-    const updatedCartItems = cartItems
-      .map((cartItem) => {
-        if (cartItem.title === item.title) {
-          const updatedQuantity = cartItem.quantity - 1;
+  const handleRemoveFromCart = useCallback(
+    (item) => {
+      const updatedCartItems = cartItems
+        .map((cartItem) => {
+          if (cartItem.title === item.title) {
+            const updatedQuantity = cartItem.quantity - 1;
 
-          if (!updatedQuantity) {
-            return null;
+            if (!updatedQuantity) {
+              return null;
+            }
+
+            return {
+              ...cartItem,
+              quantity: updatedQuantity,
+            };
           }
 
-          return {
-            ...cartItem,
-            quantity: updatedQuantity,
-          };
-        }
+          return cartItem;
+        })
+        .filter(Boolean);
 
-        return cartItem;
-      })
-      .filter(Boolean);
+      setCartItems(updatedCartItems);
+    },
+    [cartItems]
+  );
 
-    setCartItems(updatedCartItems);
-  };
-
-  const handleShowCart = () => {
+  const handleShowCart = useCallback(() => {
     setIsCartVisible(true);
-  };
+  }, []);
 
-  const handleHideCart = () => {
+  const handleHideCart = useCallback(() => {
     setIsCartVisible(false);
-  };
+  }, []);
 
   const { goTo } = useNav();
   const { setCurrentUser } = useContext(AuthContext);
 
-  const signOut = async (event) => {
-    event.preventDefault();
+  const signOut = useCallback(
+    async (event) => {
+      event.preventDefault();
 
-    await out(auth);
+      await out(auth);
 
-    setCurrentUser(null);
-    goTo("/");
-    localStorage.setItem("user", "null");
-  };
+      setCurrentUser(null);
+      goTo("/");
+      localStorage.setItem("user", "null");
+    },
+    [setCurrentUser, goTo]
+  );
 
   return (
     <div className="app__right--content">

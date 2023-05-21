@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .list {
   &__container {
     display: flex;
@@ -47,8 +49,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff8d5;
-    border: 1px solid #ffffff;
+    background-color: $lightYellow;
+    border: 1px solid $white;
 
     border-radius: 15px;
     padding: 6px 8px;

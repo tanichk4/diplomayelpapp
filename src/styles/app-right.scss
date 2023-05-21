@@ -1,9 +1,11 @@
+@import "./variables.scss";
+
 .app {
   &__right {
     box-sizing: border-box;
     padding: 30px 60px 0;
     border-radius: 35px;
-    background-color: #fff;
+    background-color: $white;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -103,7 +105,7 @@
       top: 1px;
       width: 12px;
       height: 12px;
-      background: #ff5454;
+      background: $brightRed;
       z-index: 2;
       border-radius: 50%;
     }
@@ -113,7 +115,7 @@
       box-sizing: border-box;
       width: 259px;
       height: 158px;
-      background: #ab97f3;
+      background: $purple;
       border-radius: 30px;
       margin-bottom: 30px;
 
@@ -126,7 +128,7 @@
       }
 
       &__text {
-        color: #ffffff;
+        color: $white;
         padding: 77px 61px 31px 22px;
 
         h2 {
@@ -163,7 +165,7 @@
       cursor: pointer;
       width: 50px;
       height: 50px;
-      background: #f5f6f7;
+      background: $lightGray;
       border-radius: 15px;
       border: none;
 
@@ -208,7 +210,7 @@
   height: 50px;
   border-radius: 15px;
   border: none;
-  background: #f3f3f3;
+  background: $darkWhite;
   position: relative;
   overflow: hidden;
   transition: background-color 0.3s ease-in-out;

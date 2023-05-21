@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .form {
   span,
   p {
@@ -8,7 +10,7 @@
   }
 
   p {
-    color: red;
+    color: $red;
   }
 
   &__container {
@@ -24,7 +26,7 @@
     padding: 77px 95px 54px 95px;
     width: 578px;
     margin: 0 auto;
-    background: #ffffff;
+    background: $white;
     border-radius: 35px;
     align-self: center;
   }
@@ -50,7 +52,7 @@
     border: none;
     width: 163px;
     height: 50px;
-    background: #2d9cdb;
+    background: $blue;
     border-radius: 15px;
   }
 

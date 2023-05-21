@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .delivery__wrapper {
   position: relative;
   display: flex;
@@ -13,7 +15,7 @@
   box-sizing: border-box;
   width: 184px;
   height: 162px;
-  background: #ffffff;
+  background: $white;
   border-radius: 25px;
   padding-top: 88px;
   padding: 88px 12px 34px 26px;

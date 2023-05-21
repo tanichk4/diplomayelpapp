@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 label {
   display: flex;
   flex-direction: column;
@@ -12,12 +14,12 @@ input {
   padding: 16px 13px;
   width: 388px;
   height: 50px;
-  background: #f3f3f3;
+  background: $darkWhite;
   border-radius: 15px;
   border: none;
 
   &::placeholder {
-    color: #cc9696;
+    color: $lightBrown;
   }
   &:focus {
     outline: none;
@@ -28,5 +30,5 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px #f3f3f3 inset !important;
+  -webkit-box-shadow: 0 0 0 30px $darkWhite inset !important;
 }

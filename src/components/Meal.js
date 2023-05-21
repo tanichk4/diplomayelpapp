@@ -20,7 +20,7 @@ const Meal = ({
       addToCart({ type, image, title, description, price });
       setIsClicked(true);
 
-      if (cartItems.length === 0) {
+      if (!cartItems.length) {
         handleShowCart();
       }
     }
@@ -49,7 +49,7 @@ const Meal = ({
         <div />
       </div>
       <div className="item--description--image--container">
-        <img src={image} alt="image" className="item--description--image" />
+        <img src={image} alt="description" className="item--description--image" />
       </div>
       <div className="item--description__text">
         <h2>{title}</h2>

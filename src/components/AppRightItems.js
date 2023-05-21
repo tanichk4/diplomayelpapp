@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { memo } from "react";
 
 const AppRightItems = ({ item, index, onClick, selectedType }) => {
   const handleItemClick = () => {
@@ -21,4 +22,4 @@ const AppRightItems = ({ item, index, onClick, selectedType }) => {
   );
 };
 
-export default AppRightItems;
+export default memo(AppRightItems);
