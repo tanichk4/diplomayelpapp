@@ -1,6 +1,3 @@
-import React from "react";
-import "../styles/Delivery.scss";
-
 import deliveryImage from "../assets/delivery.svg";
 import arrowImage from "../assets/arrow.svg";
 

@@ -1,10 +1,26 @@
-# Getting Started with Create React App
+# Yelp App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React application that implements a food ordering system with features such as a cart for adding dishes, category switching, and dish filtering. The project includes routing functionality for easy navigation.
+
+## Features
+
+- Cart: Users can add dishes to the cart for ordering.
+- Category Switching: Users can switch between different categories of dishes.
+- Dish Filtering: Users can filter dishes based on specific criteria.
+- Routing: The application includes routing functionality for seamless navigation between different pages.
+
+## Getting Started
+
+To run this project locally, follow the steps below:
+
+1. Clone the repository: `[repository_link]`
+2. Install the dependencies by running the command: `npm install`
+3. Start the development server by running the command: `npm start`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run the following scripts:
 
 ### `npm start`
 
@@ -29,43 +45,21 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To learn more about Create React App and React, you can refer to the following documentation:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
+- [React documentation](https://reactjs.org/)
 
-### Code Splitting
+## Troubleshooting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+If you encounter any issues, you can refer to the official troubleshooting documentation provided by Create React App: [Troubleshooting - npm run build fails to minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify).
 
-### Analyzing the Bundle Size
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To deploy the application, follow the deployment guide provided by Create React App: [Deployment](https://facebook.github.io/create-react-app/docs/deployment).
 
-### Making a Progressive Web App
+## Project Link
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# diplomayelpapp
+You can find the project hosted at: [Project Link](insert_project_link_here)

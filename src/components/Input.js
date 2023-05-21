@@ -1,5 +1,3 @@
-import React from "react";
-import "../styles/Input.scss";
 import classNames from "classnames";
 
 const Input = ({

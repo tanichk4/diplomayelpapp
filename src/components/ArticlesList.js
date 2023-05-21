@@ -4,8 +4,6 @@ import user1Image from "../assets/user1.svg";
 import user2Image from "../assets/user2.svg";
 import likeImage from "../assets/like.svg";
 
-import "../styles/ArticlesList.scss";
-
 const ArticlesList = ({ color, image, text }) => {
   return (
     <div className="list__container">

@@ -1,8 +1,8 @@
-import * as firebase from "firebase/app";
+import {initializeApp} from "firebase/app";
 
-import "firebase/auth";
+import { getAuth } from "firebase/auth";
 
-const app = firebase.initializeApp({
+const app = initializeApp({
   apiKey: "AIzaSyAyfjG-BWzzDe283tWldsQvoJVILpfbRlA",
   authDomain: "auth-firebase-app-967c3.firebaseapp.com",
   projectId: "auth-firebase-app-967c3",
@@ -11,4 +11,7 @@ const app = firebase.initializeApp({
   appId: "1:36391315149:web:268767a1b7d999f6d6eb84",
 });
 
+export const auth = getAuth();
+
 export default app;
+

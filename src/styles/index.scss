@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700;800&display=swap");
+
+@import "./app-left.scss";
+@import "./app-right.scss";
+@import "./arrow-button.scss";
+@import "./articles-list.scss";
+@import "./auth.scss";
+@import "./cart.scss";
+@import "./delivery.scss";
+@import "./form.scss";
+@import "./image.scss";
+@import "./input.scss";
+@import "./item.scss";
+@import "./items-filter.scss";
+@import "./loader.scss";
+@import "./menu.scss";
+@import "./page-under-development.scss";
+@import "./profile.scss";
+@import "./welcome.scss";
+* {
+  font-family: "Spartan", sans-serif;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+body {
+  background: #deebfb;
+  max-width: 1340px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.app__container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}

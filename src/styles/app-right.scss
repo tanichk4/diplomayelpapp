@@ -1,9 +1,7 @@
 .app {
   &__right {
     box-sizing: border-box;
-    padding: 0px 60px;
-    width: 1121px;
-    height: 794px;
+    padding: 30px 60px 0;
     border-radius: 35px;
     background-color: #fff;
     display: flex;
@@ -16,6 +14,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      margin-right: 72px;
     }
 
     &--heading {
@@ -51,7 +50,18 @@
         max-width: 677px;
         max-height: 337px;
         overflow-y: scroll;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
       }
+    }
+    &--content {
+      display: flex;
+      justify-content: space-between;
     }
   }
 }
@@ -73,7 +83,7 @@
       cursor: pointer;
       position: absolute;
       right: 0px;
-      top: 2px;
+      top: 1px;
       width: 12px;
       height: 12px;
       background: #ff5454;
@@ -192,8 +202,4 @@
   display: block;
   width: 18px;
   height: 18px;
-}
-
-.button:hover {
-  background: #666666;
 }

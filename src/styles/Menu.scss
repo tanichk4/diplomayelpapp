@@ -17,9 +17,10 @@ $body-height: 900px;
   background: $color-background;
   &__list {
     padding: 0;
-    margin: 57px 0 13px;
+    margin: 27px 0 13px;
   }
   &__item {
+    cursor: pointer;
     display: flex;
     align-items: center;
     border-radius: 15px;

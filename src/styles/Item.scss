@@ -34,43 +34,105 @@
         width: auto;
       }
     }
-  }
+    &--reaction {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      background: #ffd1d1;
 
-  &--info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+      div {
+        background: url("../assets/flame.svg");
+        display: block;
+        margin: 4px auto;
+        width: 15px;
+        height: 15px;
+      }
 
-    &__price {
-      font-weight: 800;
-      font-size: 14px;
-      line-height: 18px;
+      &--active {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        background: #ffc10729;
+        div {
+          background: url("../assets/liked.svg");
+          display: block;
+          margin: 4px auto;
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+    &--info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      &__price {
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      &__button {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid black;
+        background: #000000;
+        cursor: pointer;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        div {
+          background: url("../assets/add.svg");
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          top: 10px;
+        }
+
+        &--active {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          border: 2px solid black;
+          background: transparent;
+          cursor: auto;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          div {
+            background: url("../assets/tick.svg");
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            top: 10px;
+          }
+        }
+      }
     }
 
-    &__button {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      border: 2px solid black;
-      background: #000000;
-      cursor: pointer;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    &--active {
+      background: #f2eeee;
       position: relative;
-
-      img {
-        width: 12px;
-        height: 12px;
-        position: absolute;
-        top: 10px;
-      }
-
-      &--clicked {
-        background-color: transparent;
-      }
+      margin: 55px 0 0;
+      padding: 55px 9px 12px 28px;
+      max-width: 206px;
+      max-height: 171px;
+      border: none;
+      border-radius: 30px;
     }
   }
 }

@@ -1,8 +1,14 @@
 .form {
-  span {
+  span,
+  p {
     font-weight: 700;
     font-size: 12px;
     line-height: 18px;
+    margin: 0;
+  }
+
+  p {
+    color: red;
   }
 
   &__container {
@@ -32,9 +38,10 @@
   }
 
   &__buttons {
+    position: absolute;
+    bottom: 10%;
     display: flex;
     justify-content: space-between;
-    margin: 37px auto;
     flex-direction: column;
     align-items: center;
   }

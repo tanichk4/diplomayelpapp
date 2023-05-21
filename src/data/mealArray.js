@@ -1,12 +1,10 @@
-import BurgerWanted from "../assets/BurgerWanted.svg";
-import ButterChicken from "../assets/ButterChicken.svg";
-import HiSalmon from "../assets/HiSalmon.svg";
+import BurgerWanted from "../assets/burgerwanted.svg";
 import GreenMojito from "../assets/mojito.png";
 import SweetMargarita from "../assets/margarita.png";
 import CosmoCosmopolitan from "../assets/cosmopolitan.png";
-import OldFashioned from "../assets/old-fashioned.png";
-import PinaColada from "../assets/pina-colada.png";
-import ClassicCheeseburger from "../assets/classic-cheeseburger.png";
+import OldFashioned from "../assets/oldfashioned.png";
+import PinaColada from "../assets/pinacolada.png";
+import ClassicCheeseburger from "../assets/classiccheeseburger.png";
 import BBQBaconBurger from "../assets/bbqbaconburger.png";
 import HawaiianBurger from "../assets/hawaiianburger.png";
 import MushroomSwissBurger from "../assets/mushroomswissburger.png";
@@ -29,8 +27,9 @@ import MatchaGreenTeaDonut from "../assets/matchagreendonut.png";
 import StrawberryLemonade from "../assets/strawberrylemonade.png";
 import IcedCaramelMacchiato from "../assets/icedcaramelmacchiato.png";
 
-export const itemArray = [
+export const mealArray = [
   {
+    id: 1,
     type: "burger",
     image: BurgerWanted,
     title: "Burger Wanted",
@@ -39,6 +38,7 @@ export const itemArray = [
     price: "29",
   },
   {
+    id: 2,
     type: "drinks",
     image: GreenMojito,
     title: "Green Mojito",
@@ -46,6 +46,7 @@ export const itemArray = [
     price: "19",
   },
   {
+    id: 3,
     type: "drinks",
     image: SweetMargarita,
     title: "Sweet Margarita",
@@ -53,6 +54,7 @@ export const itemArray = [
     price: "14",
   },
   {
+    id: 4,
     type: "drinks",
     image: CosmoCosmopolitan,
     title: "Cosmo Cosmopolitan",
@@ -60,6 +62,7 @@ export const itemArray = [
     price: "36",
   },
   {
+    id: 5,
     type: "drinks",
     image: OldFashioned,
     title: "Old Fashioned",
@@ -67,6 +70,7 @@ export const itemArray = [
     price: "37",
   },
   {
+    id: 6,
     type: "drinks",
     image: PinaColada,
     title: "Pina Colada",
@@ -74,6 +78,7 @@ export const itemArray = [
     price: "35",
   },
   {
+    id: 7,
     type: "burger",
     image: ClassicCheeseburger,
     title: "Classic Cheeseburger",
@@ -82,6 +87,7 @@ export const itemArray = [
     price: "55",
   },
   {
+    id: 8,
     type: "burger",
     image: BBQBaconBurger,
     title: "BBQ Bacon Burger",
@@ -90,6 +96,7 @@ export const itemArray = [
     price: "63",
   },
   {
+    id: 9,
     type: "burger",
     image: HawaiianBurger,
     title: "Hawaiian Burger",
@@ -98,6 +105,7 @@ export const itemArray = [
     price: "57",
   },
   {
+    id: 10,
     type: "burger",
     image: MushroomSwissBurger,
     title: "Mushroom Swiss Burger",
@@ -106,6 +114,7 @@ export const itemArray = [
     price: "42",
   },
   {
+    id: 11,
     type: "burger",
     image: VeggieBurger,
     title: " Veggie Burger",
@@ -114,6 +123,7 @@ export const itemArray = [
     price: "55",
   },
   {
+    id: 12,
     type: "pizza",
     image: MargheritaPizza,
     title: " Margherita Pizza",
@@ -122,6 +132,7 @@ export const itemArray = [
     price: "25",
   },
   {
+    id: 13,
     type: "pizza",
     image: PepperoniPizza,
     title: "Pepperoni Pizza",
@@ -130,6 +141,7 @@ export const itemArray = [
     price: "26",
   },
   {
+    id: 14,
     type: "pizza",
     image: BBQChickenPizza,
     title: "BBQ Chicken Pizza",
@@ -138,6 +150,7 @@ export const itemArray = [
     price: "43",
   },
   {
+    id: 15,
     type: "pizza",
     image: VegetarianPizza,
     title: "Vegetarian Pizza",
@@ -146,6 +159,7 @@ export const itemArray = [
     price: "41",
   },
   {
+    id: 16,
     type: "pizza",
     image: HawaiianPizza,
     title: "Hawaiian Pizza",
@@ -154,6 +168,7 @@ export const itemArray = [
     price: "53",
   },
   {
+    id: 17,
     type: "salads",
     image: CaesarSalad,
     title: "Caesar Salad",
@@ -161,6 +176,7 @@ export const itemArray = [
     price: "23",
   },
   {
+    id: 18,
     type: "salads",
     image: GreekSalad,
     title: "Greek Salad",
@@ -169,6 +185,7 @@ export const itemArray = [
     price: "32",
   },
   {
+    id: 19,
     type: "salads",
     image: CapreseSalad,
     title: "Caprese Salad",
@@ -177,6 +194,7 @@ export const itemArray = [
     price: "18",
   },
   {
+    id: 20,
     type: "salads",
     image: CobbSalad,
     title: "Cobb Salad",
@@ -185,6 +203,7 @@ export const itemArray = [
     price: "32",
   },
   {
+    id: 21,
     type: "salads",
     image: AsianSesameChickenSalad,
     title: "Asian Sesame Chicken Salad",
@@ -193,6 +212,7 @@ export const itemArray = [
     price: "41",
   },
   {
+    id: 22,
     type: "donut",
     image: GlazedDonut,
     title: "Glazed Donut",
@@ -201,6 +221,7 @@ export const itemArray = [
     price: "10",
   },
   {
+    id: 23,
     type: "donut",
     image: ChocolateDonut,
     title: "Chocolate Donut",
@@ -209,6 +230,7 @@ export const itemArray = [
     price: "12",
   },
   {
+    id: 24,
     type: "donut",
     image: JellyDonut,
     title: "Jelly Donut",
@@ -217,6 +239,7 @@ export const itemArray = [
     price: "13",
   },
   {
+    id: 25,
     type: "donut",
     image: MapleBaconDonut,
     title: "Maple Bacon Donut",
@@ -225,6 +248,7 @@ export const itemArray = [
     price: "18",
   },
   {
+    id: 26,
     type: "donut",
     image: MatchaGreenTeaDonut,
     title: "Matcha Green Tea Donut",
@@ -233,6 +257,7 @@ export const itemArray = [
     price: "24",
   },
   {
+    id: 27,
     type: "drinks",
     image: StrawberryLemonade,
     title: "Strawberry Lemonade",
@@ -240,6 +265,7 @@ export const itemArray = [
     price: "8",
   },
   {
+    id: 28,
     type: "drinks",
     image: IcedCaramelMacchiato,
     title: "Iced Caramel Macchiato",

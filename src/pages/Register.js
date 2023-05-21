@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../base";
 import { useInput } from "../hooks/useInput";
 import { useNav } from "../hooks/useNav";
-import Form from "./Form";
-import app from "./base";
-import Loader from "./Loader";
-
-import "../styles/Auth.scss";
+import Form from "../components/Form";
+import app from "../base";
 
 import grapeImage from "../assets/grapes.svg";
 import leafImage from "../assets/leaf.svg";
@@ -14,27 +12,47 @@ import appleImage from "../assets/apple.svg";
 import orangeImage from "../assets/orange.svg";
 import hungryImage from "../assets/hungry.svg";
 
-const auth = getAuth();
-
 const Register = () => {
-  const [isLoading, setIsLoading] = useState(false);
-
   const email = useInput();
   const pass = useInput();
   const secondPass = useInput();
-
   const { goTo } = useNav();
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleRegister = async (event) => {
     event.preventDefault();
 
-    if (pass.value.trim() !== secondPass.value.trim()) return;
+    if (!email.value.trim()) {
+      setErrorMessage("Please enter your email.");
+      return;
+    }
+    if (!pass.value.trim() || !secondPass.value.trim()) {
+      setErrorMessage("Please enter both passwords.");
+      return;
+    }
+    if (pass.value.trim() !== secondPass.value.trim()) {
+      setErrorMessage("Passwords do not match.");
+      return;
+    }
 
     try {
       await createUserWithEmailAndPassword(auth, email.value, pass.value);
       goTo("/login");
     } catch (error) {
-      console.log(error);
+      switch (error.code) {
+        case "auth/invalid-email":
+          setErrorMessage("Invalid email.");
+          break;
+        case "auth/weak-password":
+          setErrorMessage("Weak password. Please choose a stronger password.");
+          break;
+        case "auth/email-already-in-use":
+          setErrorMessage("Email is already in use.");
+          break;
+        default:
+          setErrorMessage("An error occurred. Please try again later.");
+          break;
+      }
     }
   };
 
@@ -45,12 +63,12 @@ const Register = () => {
       <img src={appleImage} alt="apple" className="image image-apple" />
       <img src={orangeImage} alt="orange" className="image image-orange" />
       <img src={hungryImage} alt="hungry" className="image image-hungry" />
-      {isLoading && <Loader />}
       <Form
         onSubmit={handleRegister}
         email={email}
         pass={pass}
         secondPass={secondPass}
+        error={errorMessage}
       />
     </>
   );

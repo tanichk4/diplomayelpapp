@@ -1,18 +1,9 @@
-import React, { useEffect, useState } from "react";
-import "../styles/Loader.scss";
+import { useState } from "react";
 import grapesImage from "../assets/grapes.svg";
 import burgerImage from "../assets/burger.svg";
 
 const Loader = () => {
-  const [visible, setVisible] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setVisible(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  const visible = useState(true);
 
   return (
     <div className="loading">

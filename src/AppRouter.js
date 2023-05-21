@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
-import "./index.css";
+import { useContext } from "react";
+import "./styles/index.scss";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import Auth from "./components/Auth";
-import Register from "./components/Register";
+import Auth from "./pages/Auth";
+import Register from "./pages/Register";
 import Home from "./components/Home";
-import InTheMaking from "./components/InTheMaking";
 import { AuthContext } from "./context/AuthContext";
 
 const PrivateRoute = ({ children }) => {
@@ -18,7 +17,7 @@ const PrivateRoute = ({ children }) => {
   return children;
 };
 
-const App = () => {
+const AppRouter = () => {
   const { currentUser } = useContext(AuthContext);
   return (
     <div>
@@ -27,7 +26,7 @@ const App = () => {
           path="/"
           element={
             <PrivateRoute>
-                <Home />
+              <Home />
             </PrivateRoute>
           }
         />
@@ -38,12 +37,9 @@ const App = () => {
         />
 
         <Route path="*" element={<Navigate to="/login" />} />
-        <Route path="/menu" element={<InTheMaking />} />
-        <Route path="/trending" element={<InTheMaking />} />
-        <Route path="/settings" element={<InTheMaking />} />
       </Routes>
     </div>
   );
 };
 
-export default App;
+export default AppRouter;

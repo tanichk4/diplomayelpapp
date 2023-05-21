@@ -1,14 +1,20 @@
 import Input from "./Input";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
-import "../styles/Form.scss";
 import Button from "@mui/material/Button";
 
-const Form = ({ onSubmit, email, pass, secondPass, addAccount = false }) => {
+const Form = ({
+  onSubmit,
+  email,
+  pass,
+  secondPass,
+  addAccount = false,
+  error,
+}) => {
   return (
     <div className={classNames("form")}>
       <h2 className="form__title">
-        Welcome to <br /> Yelp app
+        Welcome To <br /> Yelp app
       </h2>
       <form
         onSubmit={onSubmit}
@@ -43,6 +49,7 @@ const Form = ({ onSubmit, email, pass, secondPass, addAccount = false }) => {
             className={classNames("form__input")}
           />
         )}
+        <p>{error}</p>
         <div className={classNames("form__buttons")}>
           <Button
             variant="contained"
@@ -51,7 +58,6 @@ const Form = ({ onSubmit, email, pass, secondPass, addAccount = false }) => {
           >
             <span>{addAccount ? "Login" : "Register"}</span>
           </Button>
-
           {addAccount && (
             <Link to="/reg" className="form__link">
               <Button

@@ -1,4 +1,4 @@
-import GrilledChickedImage from "../assets/grilled-chicken.svg";
+import GrilledChickedImage from "../assets/grilledchicken.svg";
 import MaskImage from "../assets/mask.svg";
 import CookieImage from "../assets/cookie.svg";
 import PizzaImage from "../assets/pizza.svg";
