@@ -1,3 +1,4 @@
+import { memo } from "react";
 import deliveryImage from "../assets/delivery.svg";
 import arrowImage from "../assets/arrow.svg";
 
@@ -11,11 +12,11 @@ const Delivery = () => {
         </h2>
         <div className="delivery__info">
           <p className="delivery__text">Know more</p>
-          <img className="arrow" src={arrowImage} />
+          <img className="arrow" src={arrowImage} alt="arrow" />
         </div>
       </div>
     </div>
   );
 };
 
-export default Delivery;
+export default memo(Delivery);

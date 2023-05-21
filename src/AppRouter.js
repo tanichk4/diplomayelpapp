@@ -1,16 +1,16 @@
-import { useContext } from "react";
 import "./styles/index.scss";
+import { useContext } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import Auth from "./pages/Auth";
 import Register from "./pages/Register";
-import Home from "./components/Home";
+import Home from "./pages/Home";
 import { AuthContext } from "./context/AuthContext";
 
 const PrivateRoute = ({ children }) => {
   let { currentUser } = useContext(AuthContext);
 
-  if (currentUser === null) {
+  if (!currentUser) {
     return <Navigate to="/login" />;
   }
 

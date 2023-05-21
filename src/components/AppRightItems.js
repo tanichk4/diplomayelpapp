@@ -12,7 +12,7 @@ const AppRightItems = ({ item, index, onClick, selectedType }) => {
   return (
     <div key={index} className={itemsClassName} onClick={handleItemClick}>
       <div>
-        <img src={item.image} alt="image" />
+        <img src={item.image} alt={item.title} />
       </div>
       <div>
         <p>{item.title}</p>

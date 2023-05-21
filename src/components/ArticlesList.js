@@ -1,14 +1,13 @@
-import React from "react";
-
 import user1Image from "../assets/user1.svg";
 import user2Image from "../assets/user2.svg";
 import likeImage from "../assets/like.svg";
+import { memo } from "react";
 
 const ArticlesList = ({ color, image, text }) => {
   return (
     <div className="list__container">
       <div className="list__icon" style={{ backgroundColor: color }}>
-        <img src={image} alt="image" color={color} />
+        <img src={image} alt="list" color={color} />
       </div>
       <div className="list__heading">
         <p>{text}</p>
@@ -30,4 +29,4 @@ const ArticlesList = ({ color, image, text }) => {
   );
 };
 
-export default ArticlesList;
+export default memo(ArticlesList);

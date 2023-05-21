@@ -57,7 +57,7 @@ export const mealArray = [
     id: 4,
     type: "drinks",
     image: CosmoCosmopolitan,
-    title: "Cosmo Cosmopolitan",
+    title: "Cosmo",
     description: "Vodka, cranberry juice, lime juice, triple sec, ice.",
     price: "36",
   },
@@ -81,7 +81,7 @@ export const mealArray = [
     id: 7,
     type: "burger",
     image: ClassicCheeseburger,
-    title: "Classic Cheeseburger",
+    title: "Classic Cheese",
     description:
       "Ground beef, cheese, lettuce, tomato, onion, pickles, burger bun.",
     price: "55",
@@ -90,7 +90,7 @@ export const mealArray = [
     id: 8,
     type: "burger",
     image: BBQBaconBurger,
-    title: "BBQ Bacon Burger",
+    title: "BBQ Burger",
     description:
       "Ground beef, bacon, barbecue sauce, cheddar cheese, lettuce, tomato, burger bun.",
     price: "63",
@@ -108,7 +108,7 @@ export const mealArray = [
     id: 10,
     type: "burger",
     image: MushroomSwissBurger,
-    title: "Mushroom Swiss Burger",
+    title: "Swiss Burger",
     description:
       "Ground beef, Swiss cheese, sautéed mushrooms, caramelized onions, lettuce, burger bun.",
     price: "42",
@@ -144,7 +144,7 @@ export const mealArray = [
     id: 14,
     type: "pizza",
     image: BBQChickenPizza,
-    title: "BBQ Chicken Pizza",
+    title: "Chicken Pizza",
     description:
       "Pizza dough, barbecue sauce, cooked chicken, red onions, mozzarella cheese, cilantro.",
     price: "43",
@@ -206,7 +206,7 @@ export const mealArray = [
     id: 21,
     type: "salads",
     image: AsianSesameChickenSalad,
-    title: "Asian Sesame Chicken Salad",
+    title: "Chicken Salad",
     description:
       "Lettuce, grilled chicken, mandarin oranges, sliced almonds, crispy noodles, sesame ginger dressing.",
     price: "41",
@@ -217,7 +217,7 @@ export const mealArray = [
     image: GlazedDonut,
     title: "Glazed Donut",
     description:
-      "Flour, sugar, yeast, milk, butter, vanilla extract, powdered sugar (for glaze).",
+      "Dough, yeast, milk, butter, vanilla extract, powdered sugar (for glaze).",
     price: "10",
   },
   {
@@ -226,7 +226,7 @@ export const mealArray = [
     image: ChocolateDonut,
     title: "Chocolate Donut",
     description:
-      "Flour, sugar, cocoa powder, milk, butter, vanilla extract, powdered sugar (for glaze).",
+      "Dough, cocoa powder, milk, butter, vanilla extract, powdered sugar (for glaze).",
     price: "12",
   },
   {
@@ -235,32 +235,32 @@ export const mealArray = [
     image: JellyDonut,
     title: "Jelly Donut",
     description:
-      "Flour, sugar, yeast, milk, butter, vanilla extract, jelly or jam filling, powdered sugar (for dusting).",
+      "Dough, milk, butter, vanilla extract, jelly or jam filling, powdered sugar.",
     price: "13",
   },
   {
     id: 25,
     type: "donut",
     image: MapleBaconDonut,
-    title: "Maple Bacon Donut",
+    title: "Maple Donut",
     description:
-      "Flour, sugar, yeast, milk, butter, vanilla extract, maple syrup glaze, cooked bacon (crumbled).",
+      "Dough, milk, butter, vanilla extract, maple syrup glaze, bacon.",
     price: "18",
   },
   {
     id: 26,
     type: "donut",
     image: MatchaGreenTeaDonut,
-    title: "Matcha Green Tea Donut",
+    title: "Matcha Donut",
     description:
-      "Flour, sugar, matcha green tea powder, milk, butter, vanilla extract, powdered sugar (for dusting).",
+      "Dough, matcha green tea powder, milk, butter, vanilla extract, powdered sugar (for dusting).",
     price: "24",
   },
   {
     id: 27,
     type: "drinks",
     image: StrawberryLemonade,
-    title: "Strawberry Lemonade",
+    title: "Strawberry Lemo",
     description: "Fresh strawberries, lemon juice, sugar, water, ice.",
     price: "8",
   },
@@ -268,7 +268,7 @@ export const mealArray = [
     id: 28,
     type: "drinks",
     image: IcedCaramelMacchiato,
-    title: "Iced Caramel Macchiato",
+    title: "Caramel Macchi",
     description: "Espresso, milk, caramel syrup, vanilla syrup, ice.",
     price: "38",
   },

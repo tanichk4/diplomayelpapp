@@ -1,5 +1,3 @@
-import React from "react";
-
 import Icons from "../assets/menusprite.svg";
 
 const Icon = ({ name, color = "#909090", size = "18px" }) => (

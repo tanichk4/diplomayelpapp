@@ -41,6 +41,14 @@
     }
   }
   &--item {
+    &__quantity {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin: auto;
+      }
+    }
     color: black;
     display: flex;
     flex-direction: row;
@@ -112,11 +120,16 @@
       border-radius: 15px;
       box-sizing: border-box;
       padding: 16px;
-
-      font-weight: 700;
-      font-size: 13px;
-      line-height: 18px;
-      color: #ffffff;
+      p {
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 18px;
+        color: #ffffff;
+      }
+      &--placed {
+        position: absolute;
+        bottom: 353px;
+      }
     }
     &--list {
       height: 553px;
@@ -128,7 +141,10 @@
       }
     }
   }
-  &__placed-order {
+  &--placed {
+    position: absolute;
+    top: 133px;
+    left: 55px;
     p {
       font-weight: 800;
       font-size: 14px;
@@ -141,11 +157,21 @@
       line-height: 16px;
       text-align: center;
     }
+    img {
+      display: block;
+      margin: auto;
+    }
   }
   &--buttons {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  &--empty {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
   }
 }
 
@@ -153,11 +179,10 @@
   &--order {
     border: none;
     background-color: #f3f3f3;
+    border-radius: 5px;
     font-weight: 700;
     font-size: 12px;
     line-height: 18px;
     box-sizing: border-box;
-    width: 15px;
-    height: 15px;
   }
 }

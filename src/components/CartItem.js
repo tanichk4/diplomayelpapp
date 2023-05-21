@@ -1,4 +1,4 @@
-import React from "react";
+import pizzaImage from "../assets/pizzaitem.svg";
 
 const CartItem = ({
   title,
@@ -8,8 +8,6 @@ const CartItem = ({
   type,
   removeFromCart,
   addToCart,
-  cartItems,
-  setCartItems,
 }) => {
   const handleDecreaseQuantity = () => {
     if (quantity > 1) {
@@ -24,7 +22,9 @@ const CartItem = ({
 
   return (
     <div className="cart--item">
-      <div className="cart--item__image"></div>
+      <div className="cart--item__image">
+        <img src={pizzaImage} alt="pizza" />
+      </div>
       <div className="cart--item__details">
         <h2>{title}</h2>
         <p>{description}</p>

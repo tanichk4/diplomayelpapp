@@ -64,6 +64,23 @@
       justify-content: space-between;
     }
   }
+
+  &__unavailable {
+    position: relative;
+    height: 740.93px;
+    width: 1007.98px;
+    text-align: center;
+
+    &--title {
+      position: absolute;
+      top: 40%;
+      left: 25%;
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 65px;
+      margin: 0;
+    }
+  }
 }
 
 .order {

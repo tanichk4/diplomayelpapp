@@ -11,7 +11,7 @@ import { articles } from "../data/articles";
 import AppRightItems from "./AppRightItems";
 import { items } from "../data/items";
 import { mealArray } from "../data/mealArray";
-import MealDupe from "./MealDupe";
+import Meal from "./Meal";
 import { useNav } from "../hooks/useNav";
 import { useContext, useState, useRef } from "react";
 import { AuthContext } from "../context/AuthContext";
@@ -23,6 +23,7 @@ const AppRightContent = () => {
   const [isCartVisible, setIsCartVisible] = useState(false);
   const [selectedType, setSelectedType] = useState("all");
   const [cartItems, setCartItems] = useState([]);
+
   const itemContainerRef = useRef(null);
 
   const handleFilterClick = (type) => {
@@ -49,7 +50,7 @@ const AppRightContent = () => {
         if (cartItem.title === item.title) {
           const updatedQuantity = cartItem.quantity - 1;
 
-          if (updatedQuantity === 0) {
+          if (!updatedQuantity) {
             return null;
           }
 
@@ -93,7 +94,7 @@ const AppRightContent = () => {
         <div className="app__right--heading">
           <h2 className="app__right--title">
             Welcome To <br /> Lucknow
-            <img src={hungryImage} alt="" className="app__right--image" />
+            <img src={hungryImage} alt="hungry" className="app__right--image" />
           </h2>
         </div>
         <div className="app__right--items">
@@ -123,7 +124,7 @@ const AppRightContent = () => {
                 )
                 .map(({ description, price, image, title, id }) => {
                   return (
-                    <MealDupe
+                    <Meal
                       setCartItems={setCartItems}
                       cartItems={cartItems}
                       description={description}
